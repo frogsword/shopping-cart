@@ -1,0 +1,13 @@
+.navbar {
+    background-color: #121212;
+    height: 7vh;
+}
+
+.links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}

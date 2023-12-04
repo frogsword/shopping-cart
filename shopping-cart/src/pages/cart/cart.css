@@ -1,0 +1,21 @@
+.cart-items {
+    display: grid;
+    height: auto;
+    grid-template-columns: 1fr;
+    place-items: center;
+}
+
+.cart-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20vw;
+    height: 30vh;
+    margin: 5vw;
+}
+
+.product-info {
+    display: flex;
+    justify-content: space-between;
+}
