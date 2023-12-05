@@ -24,7 +24,7 @@ export const Cart = () => {
 
       {calculateSubtotal() > 0 ? (
 			<div className="checkout">
-				<p>Subtotal: ${calculateSubtotal()}</p>
+				<p>Subtotal: ${calculateSubtotal().toFixed(2)}</p>
 				<button onClick={() => navigate('/')}>Continue Shopping</button>
 				<button>Checkout</button>
 			</div>
