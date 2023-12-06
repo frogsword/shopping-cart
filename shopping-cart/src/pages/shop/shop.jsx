@@ -1,9 +1,10 @@
 import React from 'react';
-import PRODUCTS from '../../products';
+import PRODUCTS from '../../fetchProducts';
 import { Product } from './product';
 import './shop.css';
 
 export const Shop = () => {
+	console.log(PRODUCTS)
 	return (
 		<div className="shop">
 			<div className="shop-title">
