@@ -5,22 +5,124 @@
 
 .cart-items {
     display: grid;
-    height: auto;
+    height: min-content;
     grid-template-columns: 1fr;
     place-items: center;
+    gap: 3rem
 }
 
 .cart-item {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 20vw;
-    height: 30vh;
-    margin: 5vw;
+    text-align: center;
+    width: 30vw;
+    height: min-content;
+    padding: 10px;
+    border: 4px solid #121212;
+    border-radius: 10px;
+    /* box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px; */
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
 }
 
-.product-info {
+.cart-item .img-container {
+    flex-shrink: 1;
+}
+
+.cart-item-info {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    flex-shrink: 1;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.title-price {
+    font-size: 2vw;
+}
+
+.change-quantity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 30%;
+}
+
+.change-quantity button {
+    width: 40px;
+    height: 30px;
+    font-size: 1.5rem;
+    border-radius: 20px;
+	border-color: 2px solid #3b0764;
+	background-color: #d8b4fe;
+}
+
+.change-quantity button:hover {
+	color: white;
+	border-color: black;
+	background-color: #3b0764;
+	transform: scale(0.95);
+	transition: 0.5s;
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.display-quantity {
+    padding-left: 7px;
+    padding-right: 7px;
+    font-size: 1.5rem;
+}
+
+label {
+    padding-right: 5px;
+    font-size: 1.5rem;
+}
+
+.checkout {
+    text-align: center;
+    padding-bottom: 3vh;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    align-items: center;
+}
+
+.checkout button {
+    padding: 10px;
+    font-size: 1.5rem;
+    border-radius: 20px;
+	border-color: 2px solid #3b0764;
+	background-color: #d8b4fe;
+    width: 20vw;
+}
+
+.checkout button:hover {
+	color: white;
+	border-color: black;
+	background-color: #3b0764;
+	transform: scale(0.95);
+	transition: 0.5s;
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media screen and (max-width: 600px) {
+    .cart-item {
+        width: 80vw;
+        flex-direction: column;
+    }
+
+    .title-price {
+        font-size: 2rem;
+    }
+
+    .cart-item .img-container img {
+        max-height: 30%;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .cart-item {
+        width: 80vw;
+    }
 }

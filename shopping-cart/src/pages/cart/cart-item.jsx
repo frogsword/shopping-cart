@@ -9,30 +9,27 @@ export const CartItem = (props) => {
 			<div className="img-container">
 				<img src={image} />
 			</div>
-			<div className="product-info">
-				<div>
+			<div className="cart-item-info">
+				<div className='title-price'>
 					<p>
 						<b>{title}</b>
 					</p>
 					<p>
-						<b>${price}</b>
+						${price}
 					</p>
 				</div>
 				<div className="change-quantity">
+				<label>Qty: </label>
 					<button
 						className="decrease-quantity"
 						onClick={() => removeItemFromCart(id)}>
-						-
+						<b>-</b>
 					</button>
-					<input
-						className="set-quantity"
-						value={cartItems[id]}
-						onChange={(e) => setItemQuantity(id, Number(e.target.value))}
-					/>
+					<p className='display-quantity'> {cartItems[id]} </p>
 					<button
 						className="increase-quantity"
 						onClick={() => addItemToCart(id)}>
-						+
+						<b>+</b>
 					</button>
 				</div>
 			</div>
